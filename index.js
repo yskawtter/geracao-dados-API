@@ -147,8 +147,6 @@ function insertDataHtml(data) {
     listElement.appendChild(liElement)
     listElement.appendChild(buttonElement)
     randomDatesCont.append(listElement)
-
-    
    }) 
    //addEventButton
   
@@ -225,7 +223,7 @@ function generateCardImg(data) {
 const canvas = document.querySelector('#myCanvas')
 let ctx = canvas.getContext('2d')
 let img = new Image()
-
+img.src = './img/img.png'
 img.onload = function() {
     //style
     ctx.drawImage(img, 0, 0)
@@ -243,5 +241,5 @@ img.onload = function() {
     ctx.fillText(`${data.estado}`, 222, 190); //estado
 }
 
-img.src = './img/img.png'
+
 }
