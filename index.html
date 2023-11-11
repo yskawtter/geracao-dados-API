@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>API CONSULTA</title>
+</head>
+<body>
+    <div class="loader hidden">
+        <div class="loader-inner"></div>
+    </div>
+    <header class="header">
+        
+    <h2>API GERAÇÃO DE DADOS</h2>
+   
+    <div class="dropdown-menu">
+        <!--GENDER-->
+        <div class="genero">
+        <h3>Gênero:</h3>
+        <select class="dropdown-genero">
+            <option value="ambos">Ambos</option>
+            <option value="masculino">masculino</option>
+            <option value="feminino">feminino</option>
+         </select>
+        </div>
+         <!--COUNTRY-->
+         <div class="pais">
+         <h3>País:</h3>
+         <select class="dropdown-country">
+            <option value="both">Aleatorio</option>
+             <option value="au">Australia</option>
+             <option value="br">Brasil</option>
+             <option value="ca">Canada</option>
+             <option value="ch">Suíça</option>
+             <option value="de">Alemanha</option>
+             <option value="dk">Dinamarca</option>
+             <option value="es">Espanha</option>
+             <option value="fi">Finlandia</option>
+             <option value="fr">France</option>
+             <option value="gb">Reino Unido</option>
+             <option value="ir">Iran</option>
+             <option value="in">India</option>
+             <option value="mx">México</option>
+             <option value="nl">Holanda</option>
+             <option value="no">Noruega</option>
+             <option value="nz">Nova Zelandia</option>
+             <option value="rs">Servia</option>
+             <option value="tr">Turquia</option>
+             <option value="ua">Ucrania</option>
+             <option value="us">Estados Unidos</option>
+          </select>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="btn-dados gerar_dados">GERAR DADOS</button>
+    <button class="btn-dados gerar_novos_dados hidden">LIMPAR DADOS</button>
+    </div>
+</header>
+    <main>
+
+
+        <section class="random-dates">
+            <div class="random-dates__container">
+            
+               <div class="identifyUser hidden">
+                <canvas id="myCanvas" width="350" height="200"></canvas>
+            </div>
+            </div>
+        </section>
+    </main>
+    
+   
+    <script src="index.js"></script>
+</body>
+</html>
