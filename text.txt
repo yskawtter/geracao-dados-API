@@ -1,2 +1,0 @@
-Um await no botão enquanto carrega os dados.
-Consertar o pais holanda

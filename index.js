@@ -52,7 +52,6 @@ generateButton.addEventListener('click', (e) => {
     
     dropdownChooseGender === 'undefined' ? dropdownChooseGender = 'both' : dropdownChooseGender
     dropdownChooseCountry === 'undefined' ? dropdownChooseCountry = 'both' : dropdownChooseCountry
-    console.log(dropdownChooseCountry)
     fetch(`https://randomuser.me/api/?inc=gender,name,location,dob,email,phone,cell,id,picture&nat=${dropdownChooseCountry}&gender=${dropdownChooseGender}`).then(data => data.json()).then(data => {
         getAge = generateAge(data)
         seeDate = generateData(data)
@@ -86,7 +85,6 @@ function generateLatAndLong(data) {
 }
 ///1-) generate Data Insert HTML (API RND DATA)
 function generateData(data) {
-    console.log(data)
     let dataResult = data.results[0]
     let nameResult = dataResult.name
     let idResult = dataResult.id 
@@ -159,9 +157,7 @@ function insertFlag(dataFLAG) {
     const country = document.querySelector('.person-answer__pais')
     const countryImg = document.createElement('img')
     countryImg.classList.add('country-img')
-    console.log(dropdownChooseCountry, dataFLAG.pais)
     fetch(`https://restcountries.com/v3.1/name/${dataFLAG.pais}`).then(data => data.json()).then(el => {
-        console.log(el)
         let flags;
         dataFLAG.pais === 'United States' ? flags = el[1].flags.svg : flags = el[0].flags.svg
         dataFLAG.pais === 'Netherlands' ? flags = el[1].flags.svg : flags
@@ -246,5 +242,6 @@ img.onload = function() {
     ctx.fillText(`${data.pais}`, 45, 190); //pais
     ctx.fillText(`${data.estado}`, 222, 190); //estado
 }
-img.src = '../img.png'
+
+img.src = './img/img.png'
 }
